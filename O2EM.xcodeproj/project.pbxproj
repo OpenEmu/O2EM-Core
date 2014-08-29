@@ -90,21 +90,12 @@
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		82EC409E0FD9EC420017FC19 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8D5B49B6048680CD000E48DA /* O2EM.oecoreplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = O2EM.oecoreplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9415A9C519B10FFE0063758C /* OEOdyssey2SystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEOdyssey2SystemResponderClient.h; path = ../OpenEmu/Odyssey2/OEOdyssey2SystemResponderClient.h; sourceTree = "<group>"; };
 		941DFB2615B6425200C6552F /* OdysseyGameCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OdysseyGameCore.m; sourceTree = "<group>"; };
-		94404785199D621C002D805E /* OEOdyssey2SystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEOdyssey2SystemResponderClient.h; path = ../../../../Documents/OpenEmu/OpenEmu/Odyssey2/OEOdyssey2SystemResponderClient.h; sourceTree = "<group>"; };
 		94AD8A37199AD89200E6520F /* wrapalleg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wrapalleg.c; sourceTree = "<group>"; };
 		94AD8A38199AD89200E6520F /* wrapalleg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrapalleg.h; sourceTree = "<group>"; };
-		94AD8A3E199AD89200E6520F /* libretro-o2em.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "libretro-o2em.c"; sourceTree = "<group>"; };
-		94AD8A3F199AD89200E6520F /* libretro-o2em.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libretro-o2em.h"; sourceTree = "<group>"; };
-		94AD8A40199AD89200E6520F /* libretro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libretro.h; sourceTree = "<group>"; };
-		94AD8A41199AD89200E6520F /* link.T */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = link.T; sourceTree = "<group>"; };
-		94AD8A42199AD89200E6520F /* o2em-mapper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "o2em-mapper.c"; sourceTree = "<group>"; };
-		94AD8A43199AD89200E6520F /* vkbd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vkbd.c; sourceTree = "<group>"; };
-		94AD8A44199AD89200E6520F /* vkbd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vkbd.h; sourceTree = "<group>"; };
-		94AD8A45199AD89200E6520F /* vkbd_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vkbd_def.h; sourceTree = "<group>"; };
 		94AD8A47199AD89200E6520F /* audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = audio.c; sourceTree = "<group>"; };
 		94AD8A48199AD89200E6520F /* audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio.h; sourceTree = "<group>"; };
 		94AD8A49199AD89200E6520F /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
@@ -171,7 +162,6 @@
 		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				82EC409E0FD9EC420017FC19 /* libz.dylib */,
 				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
 				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
 			);
@@ -190,7 +180,7 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				94404785199D621C002D805E /* OEOdyssey2SystemResponderClient.h */,
+				9415A9C519B10FFE0063758C /* OEOdyssey2SystemResponderClient.h */,
 				B5008DAD0E8BFB3E005AECAF /* OdysseyGameCore.h */,
 				941DFB2615B6425200C6552F /* OdysseyGameCore.m */,
 			);
@@ -228,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				94AD8A36199AD89200E6520F /* allegrowrapper */,
-				94AD8A39199AD89200E6520F /* libretro */,
 				94AD8A46199AD89200E6520F /* src */,
 			);
 			path = Core;
@@ -241,21 +230,6 @@
 				94AD8A38199AD89200E6520F /* wrapalleg.h */,
 			);
 			path = allegrowrapper;
-			sourceTree = SOURCE_ROOT;
-		};
-		94AD8A39199AD89200E6520F /* libretro */ = {
-			isa = PBXGroup;
-			children = (
-				94AD8A3E199AD89200E6520F /* libretro-o2em.c */,
-				94AD8A3F199AD89200E6520F /* libretro-o2em.h */,
-				94AD8A40199AD89200E6520F /* libretro.h */,
-				94AD8A41199AD89200E6520F /* link.T */,
-				94AD8A42199AD89200E6520F /* o2em-mapper.c */,
-				94AD8A43199AD89200E6520F /* vkbd.c */,
-				94AD8A44199AD89200E6520F /* vkbd.h */,
-				94AD8A45199AD89200E6520F /* vkbd_def.h */,
-			);
-			path = libretro;
 			sourceTree = SOURCE_ROOT;
 		};
 		94AD8A46199AD89200E6520F /* src */ = {
