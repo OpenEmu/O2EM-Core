@@ -22,6 +22,27 @@
 	<string>OEGameCoreController</string>
 	<key>OEGameCoreClass</key>
 	<string>OdysseyGameCore</string>
+	<key>OEGameCoreOptions</key>
+	<dict>
+		<key>openemu.system.odyssey2</key>
+		<dict>
+			<key>OEGameCoreRequiresFiles</key>
+			<true/>
+			<key>OERequiredFiles</key>
+			<array>
+				<dict>
+					<key>Description</key>
+					<string>Odyssey² BIOS</string>
+					<key>MD5</key>
+					<string>562d5ebf9e030a40d6fabfc2f33139fd</string>
+					<key>Name</key>
+					<string>o2rom.bin</string>
+					<key>Size</key>
+					<integer>1024</integer>
+				</dict>
+			</array>
+		</dict>
+	</dict>
 	<key>OEGameCorePlayerCount</key>
 	<string>1</string>
 	<key>OEProjectURL</key>
