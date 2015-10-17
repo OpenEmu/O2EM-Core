@@ -6,6 +6,8 @@
 #include <string.h>
 #define abs(a) miabs(a)
 
+#define clear o2_clear
+
 int miabs(int a){
 	if((a)<0)a=-a;
 	return a;

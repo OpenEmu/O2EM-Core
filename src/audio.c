@@ -54,7 +54,7 @@ static double flt_a=0.0, flt_b=0.0;
 static unsigned char flt_prv = 0;
 
 
-static void filter(unsigned char *buf, unsigned long len);
+static void o2_filter(unsigned char *buf, unsigned long len);
 
 
 void audio_process(unsigned char *buffer){
@@ -93,7 +93,7 @@ void audio_process(unsigned char *buffer){
 		}
 	}
 	
-	if (app_data.filter) filter(buffer, SOUND_BUFFER_LEN);	
+	if (app_data.filter) o2_filter(buffer, SOUND_BUFFER_LEN);
 }
 
 
@@ -199,7 +199,7 @@ void close_audio(void) {
 }
 
 
-static void filter(unsigned char *buffer, unsigned long len){
+static void o2_filter(unsigned char *buffer, unsigned long len){
 	static unsigned char buf[SOUND_BUFFER_LEN];
 	int t;
 	unsigned long i;
