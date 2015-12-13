@@ -470,11 +470,6 @@ OdysseyGameCore *current;
 
 - (void)executeFrame
 {
-    [self executeFrameSkippingFrame:NO];
-}
-
-- (void)executeFrameSkippingFrame:(BOOL)skip
-{
     //run();
     cpu_exec();
     
@@ -617,14 +612,14 @@ OdysseyGameCore *current;
         joystick_data[player][4] = 0;
 }
 
-- (BOOL)saveStateToFileAtPath:(NSString *)fileName
+- (void)saveStateToFileAtPath:(NSString *)fileName completionHandler:(void (^)(BOOL, NSError *))block
 {
-    return savestate([fileName UTF8String]) ? YES : NO;
+    block(savestate(fileName.fileSystemRepresentation) ? YES : NO, nil);
 }
 
-- (BOOL)loadStateFromFileAtPath:(NSString *)fileName
+- (void)loadStateFromFileAtPath:(NSString *)fileName completionHandler:(void (^)(BOOL, NSError *))block
 {
-    return loadstate([fileName UTF8String]) ? YES : NO;
+    block(loadstate(fileName.fileSystemRepresentation) ? YES : NO, nil);
 }
 
 @end
