@@ -340,7 +340,7 @@ static void draw_grid(void){
 #ifdef __LIBRETRO__
 
 //extern unsigned short int mbmp[TEX_WIDTH * TEX_HEIGHT];
-extern uint16_t mbmp[TEX_WIDTH * TEX_HEIGHT];
+extern uint16_t *mbmp;
 
 void retro_blit(){
 

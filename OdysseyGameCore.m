@@ -57,7 +57,7 @@
 
 //uint16_t mbmp[EMUWIDTH * EMUHEIGHT];
 //unsigned short int mbmp[TEX_WIDTH * TEX_HEIGHT];
-uint16_t mbmp[TEX_WIDTH * TEX_HEIGHT];
+uint16_t *mbmp;
 //short signed int SNDBUF[1024*2];
 uint8_t soundBuffer[1056];
 int SND;
@@ -394,7 +394,6 @@ OdysseyGameCore *current;
 
 - (BOOL)loadFileAtPath:(NSString *)path
 {
-    memset(mbmp, 0, sizeof(mbmp));
     RLOOP=1;
     
 	static char file[MAXC], attr[MAXC], val[MAXC], *p, *binver;
@@ -522,8 +521,20 @@ OdysseyGameCore *current;
     return OEIntSizeMake(TEX_WIDTH, TEX_HEIGHT);
 }
 
-- (const void *)videoBuffer
+- (const void *)getVideoBufferWithHint:(void *)hint
 {
+    if(!hint)
+    {
+        if(!mbmp)
+        {
+            hint = mbmp = (uint16_t*)malloc(TEX_WIDTH * TEX_HEIGHT * sizeof(uint16_t));
+        }
+    }
+    else
+    {
+        mbmp = hint;
+    }
+
     return mbmp;
 }
 
@@ -535,11 +546,6 @@ OdysseyGameCore *current;
 - (GLenum)pixelType
 {
     return GL_UNSIGNED_SHORT_5_6_5;
-}
-
-- (GLenum)internalPixelFormat
-{
-    return GL_RGB5;
 }
 
 - (NSTimeInterval)frameInterval
