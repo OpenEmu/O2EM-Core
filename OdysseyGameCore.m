@@ -388,6 +388,10 @@ OdysseyGameCore *current;
 	close_voice();
 	close_display();
 	retro_destroybmp();
+    if(mbmp)
+    {
+        free(mbmp);
+    }
 }
 
 #pragma mark Execution
