@@ -499,6 +499,11 @@ OdysseyGameCore *current;
 
 #pragma mark Video
 
+- (OEIntSize)aspectSize
+{
+    return OEIntSizeMake(EMUWIDTH, EMUHEIGHT);
+}
+
 - (OEIntRect)screenRect
 {
     return OEIntRectMake(0, 0, EMUWIDTH, EMUHEIGHT);
