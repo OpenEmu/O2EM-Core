@@ -475,33 +475,17 @@ OdysseyGameCore *current;
 {
     //run();
     cpu_exec();
-    
+
     int len = evblclk == EVBLCLK_NTSC ? 44100/60 : 44100/50;
-    //for(int x=0; x<len; x++)
-        //[[current ringBufferAtIndex:0] write:soundBuffer maxLength:len];
-//    signed short int *p=(signed short int *)SNDBUF;
-//    for(int x=0; x<len; x++)
-//    {
-//        //[[current ringBufferAtIndex:0] write:p maxLength:len*4];
-//        [[current ringBufferAtIndex:0] write:p[0] maxLength:2];
-//        [[current ringBufferAtIndex:0] write:p[1] maxLength:2];
-//    }
-    
-    //audio_cb(*p, *p++);
-    
+
     // Convert 8u to 16s
-    for(int i = 0; i != len; i ++)
+    for(int i = 0; i < len; i++)
     {
-        int16_t sample16 = (soundBuffer[i] << 8) - 32768;
-        int16_t frame[2] = {sample16, sample16};
-        //audio_cb(frame[0], frame[1]);
-        //[[current ringBufferAtIndex:0] write:frame maxLength:2];
-        //[[current ringBufferAtIndex:0] write:frame[1] maxLength:2];
-        
-        [[current ringBufferAtIndex:0] write:&frame[0] maxLength:2];
-        [[current ringBufferAtIndex:0] write:&frame[1] maxLength:2];
+        int16_t sample16 = (soundBuffer[i] - 128 ) << 8;
+
+        [[current ringBufferAtIndex:0] write:&sample16 maxLength:2];
     }
-    
+
     RLOOP=1;
 }
 
@@ -561,7 +545,7 @@ OdysseyGameCore *current;
 
 - (NSUInteger)channelCount
 {
-    return 2;
+    return 1;
 }
 
 - (double)audioSampleRate
