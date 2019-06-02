@@ -567,7 +567,7 @@ OdysseyGameCore *current;
 
 - (void)keyDown:(unsigned short)keyCode
 {
-    NSNumber *virtualCode = [virtualPhysicalKeyMap objectForKey:[NSNumber numberWithInt:keyCode]];
+    NSNumber *virtualCode = [virtualPhysicalKeyMap objectForKey:@(keyCode)];
 
     if(virtualCode)
         key[[virtualCode intValue]] = 1;
@@ -575,7 +575,7 @@ OdysseyGameCore *current;
 
 - (void)keyUp:(unsigned short)keyCode
 {
-    NSNumber *virtualCode = [virtualPhysicalKeyMap objectForKey:[NSNumber numberWithInt:keyCode]];
+    NSNumber *virtualCode = [virtualPhysicalKeyMap objectForKey:@(keyCode)];
 
     if(virtualCode)
         key[[virtualCode intValue]] = 0;
