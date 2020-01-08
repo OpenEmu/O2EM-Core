@@ -76,6 +76,8 @@ biosdir[MAXC], arkivo[MAXC][MAXC], biossux[MAXC], romssux[MAXC],
 odyssey2[MAXC], g7400[MAXC], c52[MAXC], jopac[MAXC], file_l[MAXC], bios_l[MAXC],
 file_v[MAXC],scorefile[MAXC], statefile[MAXC], path2[MAXC];
 
+extern void retro_destroybmp(void);
+
 static long filesize(FILE *stream){
     long curpos, length;
     curpos = ftell(stream);
@@ -446,7 +448,7 @@ OdysseyGameCore *current;
     
     init_audio();
     
-    app_data.crc = crc32_file([path UTF8String]);
+    app_data.crc = crc32_file([path fileSystemRepresentation]);
     
     //suck_bios();
     o2flag = 1;
@@ -455,9 +457,9 @@ OdysseyGameCore *current;
     //suck_roms();
     
     NSString *biosROM = [[self biosDirectoryPath] stringByAppendingPathComponent:@"o2rom.bin"];
-    load_bios([biosROM UTF8String]);
+    load_bios([biosROM fileSystemRepresentation]);
     
-	load_cart([path UTF8String]);
+	load_cart([path fileSystemRepresentation]);
 	//if (app_data.voice) load_voice_samples(path2);
     
 	init_display();
@@ -483,7 +485,7 @@ OdysseyGameCore *current;
     {
         int16_t sample16 = (soundBuffer[i] - 128 ) << 8;
 
-        [[current ringBufferAtIndex:0] write:&sample16 maxLength:2];
+        [[current audioBufferAtIndex:0] write:&sample16 maxLength:2];
     }
 
     RLOOP=1;
