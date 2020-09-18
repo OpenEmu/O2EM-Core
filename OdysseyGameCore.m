@@ -67,6 +67,8 @@ int joystick_data[2][5]={{0,0,0,0,0},{0,0,0,0,0}};
 void update_joy(void){
 }
 
+extern void retro_destroybmp(void);
+
 int contax, o2flag, g74flag, c52flag, jopflag, helpflag;
 
 unsigned long crcx = ~0;
