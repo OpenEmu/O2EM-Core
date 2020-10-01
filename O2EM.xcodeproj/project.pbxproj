@@ -92,7 +92,7 @@
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8D5B49B6048680CD000E48DA /* O2EM.oecoreplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = O2EM.oecoreplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9415A9C519B10FFE0063758C /* OEOdyssey2SystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEOdyssey2SystemResponderClient.h; path = ../OpenEmu/Odyssey2/OEOdyssey2SystemResponderClient.h; sourceTree = "<group>"; };
+		9415A9C519B10FFE0063758C /* OEOdyssey2SystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEOdyssey2SystemResponderClient.h; path = ../OpenEmu/SystemPlugins/Odyssey2/OEOdyssey2SystemResponderClient.h; sourceTree = "<group>"; };
 		941DFB2615B6425200C6552F /* OdysseyGameCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OdysseyGameCore.m; sourceTree = "<group>"; };
 		94AD8A37199AD89200E6520F /* wrapalleg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wrapalleg.c; sourceTree = "<group>"; };
 		94AD8A38199AD89200E6520F /* wrapalleg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrapalleg.h; sourceTree = "<group>"; };
@@ -300,7 +300,6 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "O2EM" */;
