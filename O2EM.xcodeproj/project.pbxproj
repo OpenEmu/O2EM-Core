@@ -221,7 +221,7 @@
 				94AD8A36199AD89200E6520F /* allegrowrapper */,
 				94AD8A46199AD89200E6520F /* src */,
 			);
-			path = Core;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		94AD8A36199AD89200E6520F /* allegrowrapper */ = {
@@ -490,7 +490,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -526,7 +525,6 @@
 				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				SDKROOT = macosx;
-				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
